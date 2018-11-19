@@ -1,0 +1,1 @@
+aws glue delete-database --name r8g4
