@@ -25,39 +25,17 @@ Amazon S3 > AWS Glue > Amazon Athena > Amazon QuickSight
 
 
 # Appendix:
-https://github.com/Deutsche-Boerse/dbg-pds/commit/c28a52154adf293832dd718b52c395928ea745ff
 Installing the AWS CLI
 https://docs.aws.amazon.com/cli/latest/userguide/installing.html
+
 I prefer to use Homebrew for a Mac
 https://github.com/aws/aws-cli/issues/727
+
 Configuring the AWS CLI
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+
 Copy objects between S3 buckets
 https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
+
 AWS Glue Built-in classifiers
 https://docs.aws.amazon.com/glue/latest/dg/add-classifier.html#classifier-built-in
-
-
-Create a QuickSight Account
-Choose Standard
-https://registry.opendata.aws/deutsche-boerse-pds/
-https://github.com/Deutsche-Boerse/dbg-pds
-https://github.com/Deutsche-Boerse/dbg-pds/commit/c28a52154adf293832dd718b52c395928ea745ff
-$ aws s3 cp s3://deutsche-boerse-xetra-pds/ s3://s6r8/ds-csv/xetra/2018-11/ \
---recursive --exclude "*" --include "2018-11-*"
-
-ALTER TABLE xetra_2018_11_01_bins_xetr08_csv SET LOCATION 's3://s6r8/ds-csv/xetra/2018-11';
-
-select securitydesc, securityid, avg((maxprice - minprice) / minprice) as implied_vol from xetra_2018_11_01_bins_xetr08_csv
-group by securitydesc, securityid
-order by implied_vol desc
-
-select avg(endprice) as price, securitydesc 
-from xetra_2018_11_01_bins_xetr08_csv
-group by securitydesc
-order by price desc;
-
-select sum(numberoftrades) as trades, securitydesc 
-from xetra_2018_11_01_bins_xetr08_csv
-group by securitydesc
-order by trades desc;
