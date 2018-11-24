@@ -13,6 +13,7 @@ Amazon S3 > AWS Glue > Amazon Athena > Amazon QuickSight
 # Walkthrough
 ## [Step 1: Upload a dataset to Amazon S3](step-one.md)
 ## [Step 2: Automate the creation of a Data Catalog](step-two.md)
+## [Step 3: Transform data into a compressed columnar format](step-three.md)
 
 # Step 3: Transform data into a compressed columnar format
 
@@ -36,3 +37,6 @@ https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/
 
 AWS Glue Built-in classifiers
 https://docs.aws.amazon.com/glue/latest/dg/add-classifier.html#classifier-built-in
+
+Parquet data format
+https://parquet.apache.org/documentation/latest/
