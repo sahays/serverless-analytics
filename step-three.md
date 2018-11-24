@@ -104,7 +104,7 @@ Following the steps described in Step 2, create a new crawler to create a new Gl
 ```
 Name: s6r8n6-pq (feel free to choose your name)
 IAM Role: AWSGlueServiceRole-s6r8n6 (the same IAM role that you used to create the first Crawler and the job)
-Include path: s3://s6r8/ds-pq/nyc-tlc
+Include path: s3://[your-s3-bucket]/ds-pq/nyc-tlc
 Data Store: S3
 Table prefix: pq_
 Create a single schema for each S3 path: true
@@ -122,4 +122,4 @@ order by vendors desc;
 ![View data](screenshots/view-data-pq.png)
 
 
-[<< Back](README.md)
+[<< Home](README.md) [Next >>](step-four.md)
