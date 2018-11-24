@@ -3,7 +3,7 @@ Come and learn how to leverage Amazon S3, Amazon Glue, Amazon Athena and Amazon 
 
 https://reinvent.awsevents.com/learn/builders-sessions/
 
-Builders Sessions are back at re:Invent this year by popular demand. Builders Sessions are 60-minute small groups sessions with up to five customers and one AWS expert, who is there to help, answer questions, and provide guidance. It’s just you, your laptop, and the AWS expert.
+Builders Sessions are 60-minute small groups sessions with up to five customers and one AWS expert, who is there to help, answer questions, and provide guidance. It’s just you, your laptop, and the AWS expert.
 
 Each builders session begins with a short explanation or demonstration of what you are going to build. There will not be any formal presentation. Once the demonstration is complete, you will use your laptop to experiment and build with the AWS expert.
 
@@ -14,12 +14,8 @@ Amazon S3 > AWS Glue > Amazon Athena > Amazon QuickSight
 ## [Step 1: Upload a dataset to Amazon S3](step-one.md)
 ## [Step 2: Automate the creation of a Data Catalog](step-two.md)
 ## [Step 3: Transform data into a compressed columnar format](step-three.md)
-
-# Step 3: Transform data into a compressed columnar format
-
-# Step 4: Query the data using standard SQL
-
-# Step 5: Create and Share rich web-based visualizations
+## [Step 4: Query the data using standard SQL](step-four.md)
+## [Step 5: Create and Share rich web-based visualizations](step-five.md)
 
 
 # Appendix:

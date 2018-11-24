@@ -1,5 +1,5 @@
 # Step 1: Upload a dataset to Amazon S3
-The first step towards building this demo allows you to find and upload a publically available dataset to your private bucket. This bucket will serve as a data lake where you can ingest data coming from different sources e.g. structured or unstructured data coming from your real world applications in different formats e.g. json, csv, avro, parquet etc. in either compressed e.g. gzip, snappy etc. or uncompressed state. In this demo, we will use a single csv file (~750MB) that we'll source from a public dataset hosted on S3.
+The first step towards building this demo allows you to find and upload a publicly available dataset to your private bucket. This bucket will serve as a data lake where you can ingest data coming from different sources e.g. structured or unstructured data coming from your real world applications in different formats e.g. json, csv, avro, parquet etc. in either compressed e.g. gzip, snappy etc. or uncompressed state. In this demo, we will use a single csv file (~750MB) that we'll source from a public dataset hosted on S3.
 
 ## 1.1: Finding a dataset
 Data of trips taken by taxis and for-hire vehicles in New York City.
