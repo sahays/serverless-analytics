@@ -42,7 +42,7 @@ Now, wait for the import into SPICE to complete
 ![Import finish](screenshots/qs-import-complete.png)
 
 ## 5.4 Create a new Visual
-Watch the following videos to learn about how to create a visual with filters and aggregation
+Watch the following videos that I have prepared for this session to learn about how to create a visual with filters and aggregation
 
 [Amazon QuickSight Tutorial: Create Visual with Autograph](https://youtu.be/toKeIayOp2g)
 
