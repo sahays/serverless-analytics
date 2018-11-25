@@ -5,10 +5,10 @@ We'll use AWS Glue Jobs to perform this step. A job is your business logic requi
 Before you run the job, it's important to understand the S3 bucket and folder structure so that proper IAM policies can be applied to S3 bucket
 ```
 <your-S3-bucket>
-|- ds-csv (source CSV)
-|-- nyc-tlc
+|- ds-csv (folder for all csv data sets)
+|-- nyc-tlc (source CSV)
 |- ds-pq (target parquet files that the job will emit as output of this job)
-|- jobs
+|- jobs (folder for keeping all the job related data e.g. scripts and temporary files)
 |-- scripts
 |-- temp
 ```
@@ -104,7 +104,7 @@ Following the steps described in Step 2, create a new crawler to create a new Gl
 ```
 Name: s6r8n6-pq (feel free to choose your name)
 IAM Role: AWSGlueServiceRole-s6r8n6 (the same IAM role that you used to create the first Crawler and the job)
-Include path: s3://[your-s3-bucket]/ds-pq/nyc-tlc
+Include path: s3://<your-s3-bucket>/ds-pq/nyc-tlc
 Data Store: S3
 Table prefix: pq_
 Create a single schema for each S3 path: true

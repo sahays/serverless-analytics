@@ -28,7 +28,7 @@ $ aws s3api create-bucket \
 --create-bucket-configuration LocationConstraint=us-west-2
 ```
 
-After listing all the contents and understanding the folder structure, I decided to use the data available for November 2018 by uploading it to my private S3 bucket. The following command allowed me to copy the contents over to my bucket directly from the source bucket
+After listing all the contents and understanding the folder structure, I decided to use the data available for June 2018 by uploading it to my private S3 bucket. The following command allowed me to copy the contents over to my bucket directly from the source bucket
 ```
 $ aws s3 cp "s3://nyc-tlc/trip data/yellow_tripdata_2018-06.csv" s3://<your-bucket-name>/ds-csv/nyc-tlc/
 ```
