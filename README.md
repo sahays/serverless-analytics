@@ -36,3 +36,6 @@ https://docs.aws.amazon.com/glue/latest/dg/add-classifier.html#classifier-built-
 
 Parquet data format
 https://parquet.apache.org/documentation/latest/
+
+Setting up QuickSight
+https://docs.aws.amazon.com/quicksight/latest/user/signing-in.html
