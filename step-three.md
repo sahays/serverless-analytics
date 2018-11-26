@@ -120,7 +120,7 @@ Now, compare that with the output Parquet folder: [your-s3-bucket]/ds-pq
 It's impressive to see how Parquet files reduced the size of the source data file by ~80% 
 
 ## 3.4: Create a New Glue Crawler for the Parquet data store
-Following the steps described in Step 2, create a new crawler to create a new Glue metadata table using the following properties. Creating a new crawler instead of modifying the existing one makes it easier for us to configure them independently. You also have the option to edit the existing crawler and add another data store to it.
+Following the steps described in Step 2, create a new crawler to create a new Glue metadata table using the following properties. Creating a new crawler instead of modifying the existing one makes it easier for us to configure them independently. With an existing crawler, you have the option to edit it and add another data store to it.
 ```
 Name: s6r8n6-pq (feel free to choose your name)
 IAM Role: AWSGlueServiceRole-s6r8n6 (the same IAM role that you used to create the first Crawler and the job)
