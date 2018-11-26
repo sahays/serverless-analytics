@@ -13,13 +13,33 @@ Before you run the job, it's important to understand the S3 bucket and folder st
 |-- temp
 ```
 When we created the crawler in Step 2, we allowed it to create a role (AWSGlueServiceRole-xxx) that was assumed by Glue to access S3 bucket. By default, it used the "ds-csv/nyc-tlc" folder inside the bucket to assign s3:GetObject and s3:PutObject permissions. In this job, we are going to use 2 folders "ds-pq" and "jobs" at the same level as "ds-csv". The folder "ds-pq" will store the parquet files that the job will emit as output of this job. The folder "jobs" will contain "scripts" and "temp" as specified in the step 3.2.1. This job will use the same role and it's important to modify the role **otherwise the job will fail**
+
 ![Job info](screenshots/job-info.png)
 
 We are going to modify the IAM policy attached to the following role:
 ![Job modify role](screenshots/job-modify-role.png)
 
-We'll change the policy to allow read/write access to all folders inside the S3 bucket. To make that change, the only inline policy in the role should look similar to the following. Notice "s3:DeleteObject" added to "Action" and "Resource" modified to "arn:aws:s3:::[your-s3-bucket]/*"
+We'll change the policy to allow read/write access to all folders inside the S3 bucket. To make that change, change the managed policy in the role to:
+```JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<your-s3-bucket>/*"
+            ]
+        }
+    ]
+}
+```
 ![Job modify role](screenshots/job-modify-policy.png)
+
 
 ## 3.2: Add a job
 Click on the "Jobs" menu in the left side panel. Click on "Add job" button to start adding a new job using a wizard.
