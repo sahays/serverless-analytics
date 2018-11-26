@@ -72,7 +72,7 @@ This step allows you to modify or review the source and the target columns mappi
 Finally, review the job summary and if everything looks ok click on "Save job and edit script"
 ![Job summary](screenshots/job-summary.png)
 
-## 3.2.5: Edit script (no action required)
+## 3.2.5: Edit script (optional, no action required)
 In this step, you'll see a diagram on the left that describes what transformations the script is going to apply to source to produce an output that will be saved to the target. Source and target both in this case are Amazon S3. The transformations are:
 ```
 Apply mapping: source to target column mappings

@@ -51,7 +51,7 @@ Watch the following videos that I have prepared for this session to learn about 
 ![Visuals](screenshots/qs.png)
 
 # Congratulations! 
-You are at the end of this session. Kudos to you and pat yourself on the back you have completed this session. Don't forget to leave your comment and rate this session.
+You are at the end of this session. Kudos to you on completing this session. Enjoy, have fun, and continue to learn cool stuff at this re:Invent!
 
 
 [<< Home](README.md)
