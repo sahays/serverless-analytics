@@ -8,7 +8,7 @@ Builders Sessions are 60-minute small groups sessions with up to five customers 
 Each builders session begins with a short explanation or demonstration of what you are going to build. There will not be any formal presentation. Once the demonstration is complete, you will use your laptop to experiment and build with the AWS expert.
 
 # Architecture
-Amazon S3 > AWS Glue > Amazon Athena > Amazon QuickSight
+![Architecture](screenshots/arch.png)
 
 # Walkthrough
 ## [Step 1: Upload a dataset to Amazon S3](step-one.md)

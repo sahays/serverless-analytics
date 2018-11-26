@@ -15,7 +15,7 @@ Before you run the job, it's important to understand the S3 bucket and folder st
 When we created the crawler in Step 2, we allowed it to create a role (AWSGlueServiceRole-xxx) that was assumed by Glue to access S3 bucket. By default, it used the "ds-csv/nyc-tlc" folder inside the bucket to assign s3:GetObject and s3:PutObject permissions. In this job, we are going to use 2 folders "ds-pq" and "jobs" at the same level as "ds-csv". The folder "ds-pq" will store the parquet files that the job will emit as output of this job. The folder "jobs" will contain "scripts" and "temp" as specified in the step 3.2.1. This job will use the same role and it's important to modify the role **otherwise the job will fail**
 ![Job info](screenshots/job-info.png)
 
-We are going to modify the IAM poliy attached to the following role:
+We are going to modify the IAM policy attached to the following role:
 ![Job modify role](screenshots/job-modify-role.png)
 
 We'll change the policy to allow read/write access to all folders inside the S3 bucket. To make that change, the only inline policy in the role should look similar to the following. Notice "s3:DeleteObject" added to "Action" and "Resource" modified to "arn:aws:s3:::[your-s3-bucket]/*"
@@ -32,7 +32,7 @@ Script name is auto populated with the name of the Job. Specify "S3 path where t
 ![Job script and temporary folders](screenshots/job-scripts.png)
 
 ## 3.2.2: Choose a data source
-This step in the wizard allows you to pick a Glue metatdata table that acts as the source of data that the job will use to transform to a target data format. I have picked the only table that the crawler created in Step 2.
+This step in the wizard allows you to pick a Glue metadata table that acts as the source of data that the job will use to transform to a target data format. I have picked the only table that the crawler created in Step 2.
 ![Data Source](screenshots/job-data-source.png)
 
 ## 3.2.3: Choose a data target
@@ -52,7 +52,7 @@ This step allows you to modify or review the source and the target columns mappi
 Finally, review the job summary and if everything looks ok click on "Save job and edit script"
 ![Job summary](screenshots/job-summary.png)
 
-## 3.2.5: Edit script
+## 3.2.5: Edit script (no action required)
 In this step, you'll see a diagram on the left that describes what transformations the script is going to apply to source to produce an output that will be saved to the target. Source and target both in this case are Amazon S3. The transformations are:
 ```
 Apply mapping: source to target column mappings

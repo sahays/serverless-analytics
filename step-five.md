@@ -48,6 +48,8 @@ Watch the following videos that I have prepared for this session to learn about 
 
 [Amazon QuickSight Tutorial: Create Visuals and apply Filter](https://youtu.be/Wh8BAn228SE)
 
+![Visuals](screenshots/qs.png)
+
 # Congratulations! 
 You are at the end of this session. Kudos to you and pat yourself on the back you have completed this session. Don't forget to leave your comment and rate this session.
 
